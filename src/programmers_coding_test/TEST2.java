@@ -1,3 +1,5 @@
+package programmers_coding_test;
+
 import java.util.ArrayList;
 
 public class TEST2 {

@@ -1,3 +1,5 @@
+package kakao_mobility_coding_test;
+
 import java.util.ArrayList;
 
 public class KTest3 {
