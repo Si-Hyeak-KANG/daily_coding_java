@@ -13,7 +13,7 @@ public class 올바른괄호 {
         System.out.println(test.solution(s)); //f
 
         s = "(()(";
-        System.out.println(test.solution(s)); //f
+        System.out.println(test.solution(s)) ; //f
     }
 
     boolean solution(String s) {
