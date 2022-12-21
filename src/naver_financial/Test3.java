@@ -1,8 +1,6 @@
 package naver_financial;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Test3 {
 
@@ -13,7 +11,7 @@ public class Test3 {
             ad.get(0).add(1);
         }
 
-        ad.isEmpty()
+        ad.isEmpty();
     }
 
 
