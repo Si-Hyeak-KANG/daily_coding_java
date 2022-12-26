@@ -1,19 +1,35 @@
 package PCCP.모의고사;
 
+import java.util.Arrays;
 import java.util.Stack;
 
 public class 유전법칙_해답 {
 
+    public static void main(String[] args) {
+
+        유전법칙_해답 test = new 유전법칙_해답();
+        int[][] queries = new int[][]{{3, 5}};
+        String[] result = test.solution(queries);
+        System.out.println(Arrays.toString(result));
+
+        queries = new int[][]{{3, 8}, {2, 2}};
+        result = test.solution(queries);
+        System.out.println(Arrays.toString(result));
+
+        queries = new int[][]{{3, 1}, {2, 3}, {3, 9}};
+        result = test.solution(queries);
+        System.out.println(Arrays.toString(result));
+
+        queries = new int[][]{{4, 26}};
+        result = test.solution(queries);
+        System.out.println(Arrays.toString(result));
+    }
+
     static String[] arr = {"RR", "Rr", "Rr", "rr"};
 
     public String[] solution(int[][] queries) {
-        // 부모가 RR 이면, 자신 RR
-        // 부모가 rr 이면, 자신 rr
-        // 부모가 Rr 이면, 자신 %4 의 값
 
-        // 4로 계속 나누어 몫이 0일 때까지 나누면 0, 1, 2, 3의 나머지
         int len = queries.length;
-        ;
 
         String ans[] = new String[len];
         for (int i = 0; i < len; i++) {

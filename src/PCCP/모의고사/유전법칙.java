@@ -42,18 +42,16 @@ public class 유전법칙 {
         for (int i = 0; i < queries.length; i++) {
             depth = queries[i][0];
             target = queries[i][1];
-            func(1, "Rr");
+            if(str[depth].isEmpty()) {
+                func(1, "Rr");
+            }
             answer[i] = str[depth].get(target-1);
         }
         return answer;
     }
 
     void func(int count, String curr) {
-
-        if (count > depth) {
-            return;
-        }
-
+        if (count > depth) return;
         str[count].add(curr);
 
         if(curr.equals("RR")) {
