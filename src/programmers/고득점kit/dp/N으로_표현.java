@@ -10,7 +10,7 @@ public class N으로_표현 {
         System.out.println(test.solution(5, 12)); // 4
         System.out.println(test.solution(2, 11)); // 3
     }
-    HashMap<Integer, HashSet<Integer>> map = new HashMap<>();
+
     public int solution(int N, int number) {
         return 0;
     }
