@@ -13,14 +13,15 @@ public class 큰_수_만들기 {
         System.out.println(result); // 775841
     }
 
+    // String 타입 answer 에 글자를 더하는 것보다
+    // StringBuilder 클래스의 append 를 활용하면 빠름.
     public String solution(String number, int k) {
-        String answer = "";
+        StringBuilder sb = new StringBuilder();
         int len = number.length();
         int target = len - k;
         int next = 0;
 
-        while (target > 0) {
-            target--;
+        while (target-- > 0) {
             int end = len - target;
             int max = 0;
             for (int j = next; j < end; j++) {
@@ -31,8 +32,9 @@ public class 큰_수_만들기 {
                 }
             }
 
-            answer += String.valueOf(max);
+            String addStr = String.valueOf(max);
+            sb.append(addStr);
         }
-        return answer;
+        return sb.toString();
     }
 }
