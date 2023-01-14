@@ -51,9 +51,38 @@ public class 보물지도_해답 {
         int min = Integer.MAX_VALUE;
 
         while(!queue.isEmpty()) {
+            Node nd = queue.poll();
 
+            if(nd.x == endX && nd.y ==endY) {
+                if(min > nd.time) min = nd.time;
+            }
+
+            for(int i = 0; i < 4; i++) {
+                int n1x = nd.x + oneJumpX[i];
+                int n1y = nd.y + oneJumpY[i];
+
+                if(n1x > m || n1y > n || n1x < 1 || n1y < 1 || visited[n1x][n1y][nd.cnt] || MAP [n1x][n1y]) {
+                    continue;
+                }
+
+                visited[n1x][n1y][nd.cnt] = true;
+                queue.offer(new Node(n1x, n1y, nd.time + 1, nd.cnt));
+            }
+
+            if(nd.cnt > 0) {
+                for(int i = 0; i < 4; i++) {
+                    int n2x = nd.x + twoJumpX[i];
+                    int n2y = nd.y + twoJumpY[i];
+                    if(n2x > m || n2y > n || n2x < 1 || n2y < 1 || visited[n2x][n2y][nd.cnt - 1] || MAP[n2x][n2y]) {
+                        continue;
+                    }
+                    visited[n2x][n2y][nd.cnt -1] = true;
+                    queue.offer(new Node(n2x, n2y, nd.time + 1, nd.cnt -1));
+                }
+            }
         }
-        return min;
+
+        return min == Integer.MAX_VALUE ? -1 : min;
     }
 
     static class Node {
