@@ -35,9 +35,13 @@ public class 게임_맵_최단거리 {
      * 2. 캐릭터는 (상,하,좌,우) 이동 가능
      * 3. Queue 를 활용한 BFS 탐색
      */
+
+    /**
+     * moveRow, moveCol : 캐릭터의 움직임(상,하,좌,우) 좌표를 배열에 미리 저장
+     * isVisit : 지나온 길을 체크
+     */
     int[] moveRow = {-1, 1, 0, 0};
     int[] moveCol = {0, 0, -1, 1};
-
     boolean[][] isVisit;
     int answer, endRow, endCol;
 

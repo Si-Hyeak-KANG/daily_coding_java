@@ -6,8 +6,10 @@ import java.util.Queue;
 public class 게임_맵_최단거리_다른_풀이 {
 
     public int solution(int[][] maps) {
+
         int answer = 0;
         int[][] move = {{0,1}, {0,-1},{1,0},{-1,0}};
+
         Queue<Position> que = new LinkedList<>();
         int[][] count = new int[maps.length][maps[0].length];
 
@@ -31,7 +33,6 @@ public class 게임_맵_최단거리_다른_풀이 {
         answer=count[maps.length-1][maps[0].length-1];
         if(answer==0) return -1;
         else return answer;
-
     }
 
     private static boolean isOutside(int[][] maps, Position p) {
