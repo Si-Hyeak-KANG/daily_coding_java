@@ -3,20 +3,7 @@ package programmers.고득점kit.완전탐색;
 public class 모음사전 {
     public static void main(String[] args) {
         모음사전 test = new 모음사전();
-        String word = "AAAAE";
-        int result = test.solution(word);
-        System.out.println(result);
-
-        word = "AAAE";
-        result = test.solution(word);
-        System.out.println(result);
-
-        word = "I";
-        result = test.solution(word);
-        System.out.println(result);
-
-        word = "EIO";
-        result = test.solution(word);
+        int result = test.solution("UUUUU");
         System.out.println(result);
     }
 
