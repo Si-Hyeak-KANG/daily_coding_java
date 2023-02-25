@@ -1,6 +1,8 @@
 package test;
 
 import java.util.*;
+
+// 버블정렬
 public class sort {
 
     public ArrayList<Integer> sort(ArrayList<Integer> dataList) {
