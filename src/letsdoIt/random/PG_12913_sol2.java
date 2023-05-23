@@ -12,7 +12,8 @@ public class PG_12913_sol2 {
 
         int n = land.length; // 행의 개수
 
-        // 현재 행을 제외한 이전 행중 가장 큰 수를 이전 행에 저장하면서 누적
+        // 이전 행에서 현재 밟은 땅의 열과 같지 않은 열중 가장 큰 수를 현재 땅의 값과 더함.
+        // 더한 값을 현재 땅에 저장하면서 누적
         for (int i = 1; i < n; i++) {
             land[i][0] += max(land[i-1][1], land[i-1][2], land[i-1][3]);
             land[i][1] += max(land[i-1][0], land[i-1][2], land[i-1][3]);

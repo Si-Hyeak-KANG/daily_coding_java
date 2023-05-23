@@ -36,11 +36,11 @@ public class PG_땅따먹기_12913 {
     }
     int answer = Integer.MIN_VALUE;
     int solution(int[][] land) {
-        search(land, 0, new HashSet(), 0);
+        search(land, 0, -1, 0);
         return answer;
     }
 
-    void search(int[][] land, int currRow, Set<Integer> visit, int total) {
+    void search(int[][] land, int currRow, int pastColumn, int total) {
 
         if(currRow == land.length) {
             answer = Math.max(answer, total);
@@ -48,12 +48,8 @@ public class PG_땅따먹기_12913 {
         }
 
         for (int i = 0; i < 4; i++) {
-            if (visit.contains(i)) continue;
-            total += land[currRow][i];
-            visit.add(i);
-            search(land, currRow+1, visit, total);
-            total -= land[currRow][i];
-            visit.remove(i);
+            if(i == pastColumn) continue;
+            search(land, currRow+1, i, total+land[currRow][i]);
         }
     }
 }

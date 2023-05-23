@@ -1,8 +1,6 @@
 package letsdoIt.random;
 
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * 이 문제는 동적 계획법으로 최적화해야함.
@@ -39,5 +37,4 @@ public class PG_12913_sol {
 
         return Arrays.stream(dp[n-1]).max().getAsInt();
     }
-
 }
