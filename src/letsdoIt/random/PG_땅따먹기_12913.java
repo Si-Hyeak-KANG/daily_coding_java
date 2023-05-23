@@ -1,7 +1,7 @@
 package letsdoIt.random;
 
-import java.util.HashSet;
-import java.util.Set;
+import letsdoIt.solution.PG_12913_sol;
+import letsdoIt.solution.PG_12913_sol2;
 
 // Level 2
 // 행의 개수 N : 100,000 이하 자연수
@@ -17,22 +17,6 @@ public class PG_땅따먹기_12913 {
                 {4, 3, 2, 1}
         });
         System.out.println(result);
-
-        PG_12913_sol test2 = new PG_12913_sol();
-        int result2 = test2.solution(new int[][]{
-                {1, 2, 3, 5},
-                {5, 6, 7, 8},
-                {4, 3, 2, 1}
-        });
-        System.out.println(result2);
-
-        PG_12913_sol2 test3 = new PG_12913_sol2();
-        int result3 = test3.solution(new int[][]{
-                {1, 2, 3, 5},
-                {5, 6, 7, 8},
-                {4, 3, 2, 1}
-        });
-        System.out.println(result3);
     }
     int answer = Integer.MIN_VALUE;
     int solution(int[][] land) {

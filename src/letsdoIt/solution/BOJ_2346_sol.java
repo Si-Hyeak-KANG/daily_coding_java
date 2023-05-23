@@ -1,4 +1,4 @@
-package letsdoIt.random;
+package letsdoIt.solution;
 
 import java.io.*;
 import java.util.ArrayDeque;
