@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 // 경우의 수가 2^31보다 작다고 하니 int 로 가자
 // 만약 이 문제를 또 접했을 경우, 아래와 같은 점화식을 다시 떠올리지 못할 것 같다.
 // Q. n개의 코인으로 총 가치 10 만들 수 있는 경우의 수
-public class BOJ_2293_동전1 {
+public class BOJ_동전1_2293 {
 
     //  제한 용량이 4MB 이기 때문에 너무 큰 배열을 사용하지 말것
     public static void main(String[] args) throws IOException {
